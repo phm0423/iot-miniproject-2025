@@ -82,6 +82,10 @@ ERD
     - Newtonsoft.Json
 3. View, ViewModel 구성
 4. WPF 애니메이션 기능으로 컨베이어 벨트 구현
+
+https://github.com/user-attachments/assets/411343bc-ce74-4f7c-be59-bc6bc38936fc
+
+
 5. 
 
 ##### MQTT Subscriber
