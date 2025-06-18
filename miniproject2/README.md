@@ -74,12 +74,17 @@ ERD
 - 라즈베리파이, 아두이노 등 사용 디바이스 구성 및 구현
 - C# 시뮬레이션으로 동작을 만드는 윈앱 구현
 
-1. Visual Studio 프로젝트 생성
+1. Visual Studio WPF MVVM 프로젝트 생성
+2. NuGet 패키지 서치
+    - CommunityToolkit.Mvvm
+    - MahApps.Metro, IconPacks
+    - MQTTNet
+    - Newtonsoft.Json
 
 ##### MQTT Subscriber
 - WPF 과목에서 사용했던 MQTT Subscriber 그대로 사용
-- SmartHome 작업했던 부분 수정 DB 저장부분 구성
 - DB 저장부분 추가
+- SmartHome 작업했던 부분 수정 DB 저장부분 변경
 
 #### 파이썬 AI + ASP.NET 연동
 
