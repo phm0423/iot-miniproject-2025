@@ -80,6 +80,9 @@ ERD
     - MahApps.Metro, IconPacks
     - MQTTNet
     - Newtonsoft.Json
+3. View, ViewModel 구성
+4. WPF 애니메이션 기능으로 컨베이어 벨트 구현
+5. 
 
 ##### MQTT Subscriber
 - WPF 과목에서 사용했던 MQTT Subscriber 그대로 사용
