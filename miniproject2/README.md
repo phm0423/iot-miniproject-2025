@@ -94,7 +94,16 @@ https://github.com/user-attachments/assets/411343bc-ce74-4f7c-be59-bc6bc38936fc
 
 1. 서비스 실행 중 확인
     - 콘솔에서 `telnet ip주소 포트번호` 화면이 전환되면 접속성공
+2. MainViewModel.cs 현재 Publish에 맞게 수정
+    - BrokerIP, Topic...
+3. EntityFramework 사용, Database 테이블 모델화(DBFirst)
+4. Config.json 파일, 설정파일 로드 클래스 작업
+5. 구독 결과
 
+##### WPF 공정관리 앱 개발
+- 기본적인 DB관리 앱 + 실시간 공정 모니터링 + 리포트 시각화
+
+1. CommunityToolkit.Mvvm, MahApps.Metro 초기 설정
 
 #### 파이썬 AI + ASP.NET 연동
 
