@@ -11,9 +11,9 @@
     Title="IoT Device Simulator" Height="350" Width="600" ResizeMode="NoResize">
     <Grid Margin="5">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         
         <!-- UI 구성 -->
