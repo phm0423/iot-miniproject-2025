@@ -1,4 +1,4 @@
-﻿<mah:MetroWindow
+﻿<mah:MetroWindow 
     x:Class="WpfMrpSimulatorApp.Views.MainView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -10,6 +10,6 @@
     mc:Ignorable="d"
     Title="MRP 공정관리" Height="450" Width="800">
     <Grid>
-        <Label Content="{Binding Greeting}"/>
+        <Label Content="{Binding Greeting}" />
     </Grid>
 </mah:MetroWindow>

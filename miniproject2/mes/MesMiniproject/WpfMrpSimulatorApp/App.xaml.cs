@@ -4,22 +4,22 @@ using System.Windows;
 using WpfMrpSimulatorApp.ViewModels;
 using WpfMrpSimulatorApp.Views;
 
-namespace WpfMrpSimulatorApp;
-
-/// <summary>
-/// Interaction logic for App.xaml
-/// </summary>
-public partial class App : Application
+namespace WpfMrpSimulatorApp
 {
-    private void Application_Startup(object sender, StartupEventArgs e)
+    /// <summary>
+    /// Interaction logic for App.xaml
+    /// </summary>
+    public partial class App : Application
     {
-        var viewModel = new MainViewModel();
-        var view = new MainViewModel
+        private void Application_Startup(object sender, StartupEventArgs e)
         {
-            DataContext = viewModel,
-        };
+            var viewModel = new MainViewModel();
+            var view = new MainView
+            {
+                DataContext = viewModel,
+            };
 
-        view.ShowDialog();
+            view.ShowDialog();
+        }
     }
 }
-

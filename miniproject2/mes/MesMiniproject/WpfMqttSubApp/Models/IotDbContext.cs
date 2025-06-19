@@ -40,10 +40,10 @@ public partial class IotDbContext : DbContext
 
             entity.HasIndex(e => e.SchIdx, "fk_processes_schedules_idx");
 
-            entity.HasIndex(e => e.PrcCd, "prcCD_UNIQUE").IsUnique();
+            entity.HasIndex(e => e.PrcCd, "prcCd_UNIQUE").IsUnique();
 
             entity.Property(e => e.PrcIdx)
-                .HasComment("공정처리순번(자동증가)")
+                .HasComment("공정처리 순번(자동증가)")
                 .HasColumnName("prcIdx");
             entity.Property(e => e.ModDt)
                 .HasComment("수정일")
@@ -52,30 +52,30 @@ public partial class IotDbContext : DbContext
             entity.Property(e => e.PrcCd)
                 .HasMaxLength(45)
                 .IsFixedLength()
-                .HasComment("공정처리 ID (UK)\nyyyyMMdd-NewGuid(36)")
-                .HasColumnName("prcCD");
+                .HasComment("공정처리 ID(UK) : yyyyMMdd-NewGuid(36)")
+                .HasColumnName("prcCd");
             entity.Property(e => e.PrcDate)
-                .HasComment("실제공정처리일")
+                .HasComment("실제 공정처리일")
                 .HasColumnName("prcDate");
             entity.Property(e => e.PrcEndTime)
-                .HasComment("실제종료시간")
+                .HasComment("실제 종료시간")
                 .HasColumnType("time")
                 .HasColumnName("prcEndTime");
             entity.Property(e => e.PrcFacilityId)
                 .HasMaxLength(8)
                 .IsFixedLength()
-                .HasComment("실제 공정장비ID")
+                .HasComment("실제 공정장비아이디")
                 .HasColumnName("prcFacilityId");
+            entity.Property(e => e.PrcLoadTime)
+                .HasComment("실제 로드타임")
+                .HasColumnName("prcLoadTime");
             entity.Property(e => e.PrcResult)
-                .HasComment("공정처리여부(1성공, 0실패)")
+                .HasComment("공정처리 여부(1성공, 0실패)")
                 .HasColumnName("prcResult");
             entity.Property(e => e.PrcStartTime)
-                .HasComment("실제시작시간")
+                .HasComment("실제 시작시간")
                 .HasColumnType("time")
                 .HasColumnName("prcStartTime");
-            entity.Property(e => e.PrcloadTime)
-                .HasComment("실제로드타임")
-                .HasColumnName("prcloadTime");
             entity.Property(e => e.RegDt)
                 .HasComment("등록일")
                 .HasColumnType("datetime")
@@ -94,8 +94,12 @@ public partial class IotDbContext : DbContext
 
             entity.ToTable("schedules");
 
-            entity.Property(e => e.SchIdx).HasColumnName("schIdx");
-            entity.Property(e => e.LoadTime).HasColumnName("loadTime");
+            entity.Property(e => e.SchIdx)
+                .HasComment("공정계획 순번(자동증가)")
+                .HasColumnName("schIdx");
+            entity.Property(e => e.LoadTime)
+                .HasComment("로드타임(초)")
+                .HasColumnName("loadTime");
             entity.Property(e => e.ModDt)
                 .HasComment("수정일")
                 .HasColumnType("datetime")
@@ -110,13 +114,13 @@ public partial class IotDbContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("regDt");
             entity.Property(e => e.SchAmount)
-                .HasComment("목표수량")
+                .HasComment("계획목표수량")
                 .HasColumnName("schAmount");
             entity.Property(e => e.SchDate)
                 .HasComment("공정계획일")
                 .HasColumnName("schDate");
             entity.Property(e => e.SchEndTime)
-                .HasComment("계획된 종료시간")
+                .HasComment("계획 종료시간")
                 .HasColumnType("time")
                 .HasColumnName("schEndTime");
             entity.Property(e => e.SchFacilityId)
@@ -125,7 +129,7 @@ public partial class IotDbContext : DbContext
                 .HasComment("생산설비 ID")
                 .HasColumnName("schFacilityId");
             entity.Property(e => e.SchStartTime)
-                .HasComment("계획된 시작시간")
+                .HasComment("계획 시작시간")
                 .HasColumnType("time")
                 .HasColumnName("schStartTime");
         });
