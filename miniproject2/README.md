@@ -87,6 +87,8 @@ https://github.com/user-attachments/assets/411343bc-ce74-4f7c-be59-bc6bc38936fc
 
 5. 선별결과 MQTT로 전달 기능 추가
 
+    <img src="../image/mp0005.png" width="600">
+
 ##### MQTT Subscriber
 - WPF 과목에서 사용했던 MQTT Subscriber 그대로 사용
 - DB 저장부분 추가
@@ -100,10 +102,18 @@ https://github.com/user-attachments/assets/411343bc-ce74-4f7c-be59-bc6bc38936fc
 4. Config.json 파일, 설정파일 로드 클래스 작업
 5. 구독 결과
 
+    <img src="../image/mp0004.png" width="600">
+
 ##### WPF 공정관리 앱 개발
 - 기본적인 DB관리 앱 + 실시간 공정 모니터링 + 리포트 시각화
 
 1. CommunityToolkit.Mvvm, MahApps.Metro 초기 설정
+2. MainView.xaml UI 디자인
+3. SetingView.xaml 생성
+4. Helpers.Common 클래스 정적 인스턴스 변수
+5. SettingView 화면 UI 구현
+6. SettingViewModel과 연동 작업
+7. Model DB 테이블 클래스 가져오기
 
 #### 파이썬 AI + ASP.NET 연동
 
